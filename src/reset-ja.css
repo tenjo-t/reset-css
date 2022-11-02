@@ -1,0 +1,7 @@
+@import "./reset.css";
+
+:root {
+  --line-height: 1.9;
+  --font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "BIZ UDPGothic", Meiryo, sans-serif;
+}

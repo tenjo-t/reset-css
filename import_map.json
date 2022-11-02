@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "fs": "https://deno.land/std@0.161.0/fs/mod.ts",
+    "postcss": "https://deno.land/x/postcss@8.4.16/mod.js"
+  }
+}

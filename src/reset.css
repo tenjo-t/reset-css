@@ -1,0 +1,161 @@
+@import "./_the-new-css-reset.css";
+
+:root {
+  --line-height: 1.5;
+  --font-family: ui-san-serif, system-ui, -apple-system, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+html {
+  line-height: var(--line-height);
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+  font-family: var(--font-family);
+}
+
+pre {
+  white-space: pre;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 1em;
+}
+
+dfn,
+em,
+i,
+var {
+  font-style: italic;
+}
+
+mark {
+  background-color: var(--mark-bg, #f7f7a0); /* add dark mode */
+}
+
+ruby > rt {
+  font-size: max(0.5em, 11px);
+  text-align: center;
+}
+
+s,
+del {
+  text-decoration: line-through;
+}
+
+sub,
+sup,
+small {
+  font-size: smaller;
+}
+
+sub {
+  vertical-align: sub;
+}
+
+sup {
+  vertical-align: super;
+}
+
+u {
+  text-decoration: wavy underline 1px;
+}
+
+/* for choromium */
+audio[controls] {
+  height: revert;
+  width: revert;
+}
+
+audio,
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  max-width: 100%;
+}
+
+a,
+area,
+button,
+input[type="button"],
+input[type="checkbox"],
+input[type="color"],
+input[type="file"],
+input[type="image"],
+input[type="radio"],
+input[type="reset"],
+input[type="submit"],
+select,
+summary {
+  cursor: pointer;
+}
+
+:is(
+  input:not([disabled]):not([type="hidden"]),
+  select:not([disabled]),
+  textarea:not([disabled]),
+  button:not([disabled]),
+  a[href],
+  area[href],
+  summary,
+  iframe,
+  object,
+  embed,
+  audio[controls],
+  video[controls],
+  [contenteditable],
+  [tabindex]:not([disabled])
+):not([hidden]):focus-visible {
+  outline: var(--focus-ring-color, #3b82f6) auto var(--focus-ring-width, 2px);
+  outline-offset: var(--focus-ring-offset, unset);
+}
+
+dialog {
+  position: revert;
+  inset-block: revert;
+  inset-inline: 0;
+  width: fit-content;
+  margin: auto;
+}
+
+dialog::backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--backdrop, #00000022);
+}
+
+/* https://github.com/adobe/react-spectrum/blob/main/packages/%40react-aria/visually-hidden/src/VisuallyHidden.tsx */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1;
+  margin: 0 -1px -1px 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1;
+  white-space: nowrap;
+}
